@@ -1,0 +1,202 @@
+/* ── PAGE ── */
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── NAV ── */
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  animation: slideDown 0.4s ease both;
+}
+
+.home-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home-logo-img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  transform: scale(1.3);
+  transform-origin: left center;
+}
+
+.home-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--accent);
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+
+.home-logo-sub {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.home-nav-btns {
+  display: flex;
+  gap: 10px;
+}
+
+/* ── HERO ── */
+.home-hero {
+  flex: 1;
+  position: relative;
+  background-image: url('../../public/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.home-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(2px);
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+/* ── HEADLINE ── */
+.home-headline {
+  text-align: center;
+  animation: fadeUp 0.6s ease both;
+}
+
+.home-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.home-title-accent { color: var(--accent); }
+
+.home-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+}
+
+/* ── CARD ── */
+/* ── CARD ── */
+.home-card {
+  width: 100%;
+  animation: scaleIn 0.45s ease both;
+  animation-delay: 0.2s;
+  background: rgba(22, 25, 32, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* ── RESULT ── */
+.home-result { margin-top: 20px; animation: fadeUp 0.3s ease both; }
+.home-result-msg { color: var(--muted); font-size: 0.9rem; }
+
+.home-result-stack {
+  background: var(--surface2);
+  border-radius: 10px;
+  padding: 14px;
+  gap: 8px;
+}
+
+.home-amount-box {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-top: 4px;
+}
+
+.home-amount-strike { text-decoration: line-through; color: var(--muted); font-size: 0.9rem; }
+.home-amount-reduced { color: var(--success); font-weight: 700; font-size: 1.2rem; }
+.home-amount { font-weight: 700; font-size: 1.2rem; }
+
+/* ── ROW ── */
+.home-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.home-row-label { color: var(--muted); }
+.home-row-value { font-weight: 500; }
+
+/* ══════════════════════════
+   MOBILE
+══════════════════════════ */
+@media (max-width: 600px) {
+
+  .home-nav {
+    padding: 6px 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .home-logo-img {
+    width: 70px;
+    height: 70px;
+    transform: scale(1.2);
+  }
+
+  .home-logo { font-size: 1.1rem; }
+  .home-logo-sub { font-size: 0.62rem; }
+
+  .home-nav-btns {
+    gap: 6px;
+  }
+
+  .home-nav-btns button {
+    padding: 7px 10px;
+    font-size: 0.78rem;
+  }
+
+  .home-hero {
+    padding: 40px 14px;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .home-card {
+    padding: 20px 14px;
+  }
+}

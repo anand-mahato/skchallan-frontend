@@ -1,0 +1,93 @@
+.officer-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.officer-wrap {
+  flex: 1;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+  animation: fadeUp 0.5s ease both;
+}
+
+.officer-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 28px;
+}
+
+.officer-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── HISTORY ── */
+.officer-history-empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.officer-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.officer-history-item {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  animation: fadeUp 0.3s ease both;
+}
+
+.officer-history-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.officer-history-vehicle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.officer-history-reason {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.officer-history-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.officer-history-amount {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.officer-history-original {
+  text-decoration: line-through;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 480px) {
+  .officer-wrap { padding: 24px 16px; }
+  .officer-title { font-size: 1.4rem; }
+}

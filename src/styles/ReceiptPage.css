@@ -1,0 +1,188 @@
+/* ── PAGE ── */
+.receipt-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 20px;
+  animation: fadeUp 0.5s ease both;
+}
+
+/* ── CARD ── */
+.receipt-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ── HEADER ── */
+.receipt-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.receipt-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.receipt-gov {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.receipt-dept {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ── DIVIDER ── */
+.receipt-divider {
+  border: none;
+  border-top: 1px dashed var(--border);
+  margin: 16px 0;
+}
+
+/* ── TITLE ── */
+.receipt-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.receipt-paid-badge {
+  background: #14532d;
+  color: #4ade80;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.receipt-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+/* ── DETAILS ── */
+.receipt-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+}
+
+.receipt-row-label {
+  color: var(--muted);
+}
+
+.receipt-row-value {
+  font-weight: 600;
+  color: var(--text);
+  text-align: right;
+}
+
+/* ── AMOUNT ── */
+.receipt-amount-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.receipt-amount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.receipt-amount-label {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.receipt-amount-strike {
+  text-decoration: line-through;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.receipt-amount-paid {
+  color: var(--success);
+  font-weight: 800;
+  font-size: 1.4rem;
+  font-family: var(--font-display);
+}
+
+.receipt-saved {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ── FOOTER TEXT ── */
+.receipt-footer-text {
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-align: center;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* ── BUTTONS ── */
+.receipt-btns {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.receipt-btns button {
+  flex: 1;
+  padding: 12px;
+}
+
+/* ── PRINT ── */
+@media print {
+  .receipt-btns { display: none; }
+  .receipt-page { padding: 0; background: white; }
+  .receipt-card {
+    border: none;
+    box-shadow: none;
+    color: black;
+    background: white;
+  }
+  .receipt-gov,
+  .receipt-title,
+  .receipt-row-value { color: black; }
+  .receipt-row-label,
+  .receipt-dept,
+  .receipt-footer-text { color: #555; }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 480px) {
+  .receipt-card { padding: 20px 16px; }
+  .receipt-btns { flex-direction: column; }
+  .receipt-amount-paid { font-size: 1.2rem; }
+}

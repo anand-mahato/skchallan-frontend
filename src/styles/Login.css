@@ -1,0 +1,48 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  animation: scaleIn 0.4s ease both;
+}
+
+.login-back {
+  margin-bottom: 24px;
+  font-size: 0.85rem;
+  padding: 7px 14px;
+}
+
+.login-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  animation: fadeUp 0.4s ease both;
+}
+
+.login-subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+  animation: fadeUp 0.4s ease both;
+  animation-delay: 0.1s;
+}
+
+.login-role-label { font-weight: 600; }
+.login-role-user    { color: var(--success); }
+.login-role-officer { color: var(--accent2); }
+
+.login-submit { margin-top: 8px; }
+
+/* ── MOBILE ── */
+@media (max-width: 480px) {
+  .login-page { padding: 16px; align-items: flex-start; padding-top: 60px; }
+  .login-card { padding: 20px 16px; }
+  .login-title { font-size: 1.3rem; }
+}

@@ -1,0 +1,69 @@
+.user-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-wrap {
+  flex: 1;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+  animation: fadeUp 0.5s ease both;
+}
+
+.user-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.user-vehicle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+.user-vehicle strong { color: var(--text); }
+
+/* result */
+.user-result { margin-top: 20px; animation: fadeUp 0.3s ease both; }
+.user-result-msg { color: var(--muted); font-size: 0.9rem; }
+
+.user-result-inner {
+  background: var(--surface2);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.user-rows { gap: 8px; }
+
+.user-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.user-row-label { color: var(--muted); }
+.user-row-value { font-weight: 500; }
+
+.user-amount-box {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.user-amount-strike { text-decoration: line-through; color: var(--muted); font-size: 0.85rem; }
+.user-amount-reduced { color: var(--success); font-weight: 700; font-size: 1.4rem; }
+.user-amount-note { color: var(--muted); font-size: 0.78rem; margin-top: 2px; }
+.user-amount { font-weight: 700; font-size: 1.4rem; }
+
+/* ── MOBILE ── */
+@media (max-width: 480px) {
+  .user-wrap { padding: 24px 16px; }
+  .user-title { font-size: 1.4rem; }
+}
